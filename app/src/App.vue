@@ -7,10 +7,16 @@ import { RouterLink, RouterView } from "vue-router"
     <div>
       <RouterLink :to="{ name: 'Home' }">Home</RouterLink>
       |
-      <RouterLink :to="{ name: 'About' }">About</RouterLink>
+      <RouterLink :to="{ name: 'About' }" class="test">About</RouterLink>
       |
       <RouterLink to="/test">does not exist</RouterLink>
     </div>
     <RouterView />
   </div>
 </template>
+
+<style lang="scss" scoped>
+.test {
+  color: red;
+}
+</style>
